@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        html {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        textarea {
+            display: block;
+            width: 100%;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="js-input" cols="30" rows="10">
+.product-summary {
+    -webkit-box-shadow: 0 0 5px 0 #7e9dff;
+    box-shadow: 0 0 5px 0 #7e9dff;
+    border: 2px solid #0ab1ff;
+    border-radius: 4px 4px 4px 0px;
+}
+.product-cta {
+    width: 100%;
+    position: relative;
+    min-height: 136px;
+}
+.product-cta > span {
+    font-size: 16px;
+    line-height: 1;
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    margin: 0;
+    padding: 9px 15px 9px 15px;
+    color: #fff;
+    background-color: #0ab1ff;
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,.14);
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,.14);
+}
+.product-cta > span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -10px;
+    bottom: -7px;
+    border-top: 0 inset transparent;
+    border-right: 10px solid #133091;
+    border-bottom: 7px inset transparent;
+    border-left: 10px inset transparent;
+}
+.product-cta img {
+    width: 96px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 20px;
+}
+.product-name {
+    word-break: break-word;
+    float: left;
+}
+.product-name h4 {
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.4em;
+    display: block;
+    font-size: 15px;
+    color: #e2234d;
+    text-transform: uppercase;
+}
+.product-name small {
+    margin-top: 7px;
+    font-size: 16px;
+    display: block;
+    color: #3d5274;
+    line-height: 1;
+}
+
+.button-cta {
+    border: none;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    text-decoration: none;
+    border-radius: 4px;
+    line-height: 1;
+    background: -webkit-linear-gradient(top, #f59000, #fd6e1d);
+    width: auto;
+    display: inline-block;
+    font-size: 16px;
+    padding: 12px 20px !important;
+    color: #fff !important;
+    font-weight: normal !important;
+}
+.button-cta:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #fd9b00;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+.score {
+    height: 96px;
+}
+.score text.label {
+    font-size: 4px;
+}
+.score text {
+    fill: #FF5252;
+}
+.score circle.bg {
+    stroke: #e5e5e5;
+}
+.score circle.progress {
+    stroke: #FF5252;
+}
+.score circle.progress.ani {
+    transition: stroke-dashoffset 1.5s ease-out;
+    -webkit-transition: stroke-dashoffset 1.5s ease-out;
+}
+
+@media only screen and (min-width: 480px) {
+    .product-link {
+        text-align: right;
+        padding: 10px 20px;
+        background-color: #f3f6f9;
+    }
+    .product-cta {
+        border-bottom: 1px solid #ddd;
+        padding: 20px;
+    }
+    .score {
+        float: right;
+    }
+    .product-info {
+        padding: 20px;
+    }
+    .product-name {
+        padding: 15px 0 0 111px;
+        width: calc(100% - 96px - 15px);
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .product-link img {
+        display: none;
+    }
+    .product-link .button-cta {
+        display: block;
+    }
+
+    .layout1 .product-cta {
+        padding: 20px 15px;
+    }
+    .layout1 .product-cta img {
+        width: 160px;
+        position: relative;
+        top: 0;
+        -webkit-transform: none;
+        transform: none;
+        left: 0;
+        display: block;
+        margin: 0 auto 15px;
+    }
+    .layout1 .product-cta .product-name {
+        float: none;
+    }
+    .layout1 .product-link {
+        padding: 0 15px 15px;
+    }
+
+    .layout1 .product-link .button-cta {
+        padding: 14px 20px;
+        font-size: 18px;
+    }
+    .layout1 .score {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        height: 80px;
+    }
+
+    .layout2 .score {
+        height: 64px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .layout2 .product-cta {
+        padding: 10px;
+        min-height: 104px;
+    }
+    .layout2 .product-cta > span {
+        padding: 9px 15px 9px 15px;
+        font-size: 14px;
+    }
+    .layout2 .product-cta img {
+        width: 60px;
+        left: 10px;
+    }
+    .layout2 .product-cta .product-name {
+        padding: 10px 0 0 70px;
+        width: calc(100% - 64px - 10px);
+    }
+    .layout2 .product-name h4 {
+        margin: 0;
+        font-weight: 400;
+        line-height: 1.4em;
+        display: block;
+        font-size: 12px;
+    }
+    .layout2 .product-name small {
+        font-size: 13px;
+    }
+    .layout2 .product-link {
+        padding: 0 10px 10px;
+    }
+    .layout2 .button-cta {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+    </textarea>
+    <textarea id="js-output" cols="30" rows="20" style="margin-top: 15px"></textarea>
+    <script src="./dist/main.js"></script>
+    <script>
+        var source = document.querySelector('#js-input').value;
+
+        var postCSS = new PostCSS();
+        postCSS.addPrefixerAndMinify(source, null, function(result){
+            if (result.status == 0)
+                document.querySelector('#js-output').innerHTML = result.text;
+        });
+
+
+        /*function textPrepare(text = '') {
+            return text.replace(/\</g, "&lt;").replace(/\>/g, "&gt;");
+        }
+
+        var params = {browsers: ["last 3 versions"], grid: true};
+
+        postcss([
+            autoprefixer(params),
+        ])
+            .process(source)
+            .then(compiled => {
+                document.querySelector('#js-output').innerHTML = textPrepare(compiled.css);
+            })
+            .catch(error => {
+                document.querySelector('#js-output').innerHTML = '';
+                var error_messsage = this.textPrepare(error.toString());
+            });*/
+
+    </script>
+</body>
+</html>

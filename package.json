@@ -1,0 +1,23 @@
+{
+  "name": "Demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/main.js",
+  "scripts": {
+    "build": "parcel build ./src/main.js --no-source-maps ",
+    "help": "parcel --help",
+    "build-old": "parcel build ./src/main.js --out-dir ./assets --public-url /assets"
+  },
+  "author": "Tidus",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.9.7"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.0.1",
+    "clean-css": "^4.1.11",
+    "cssnano": "^4.0.4",
+    "postcss": "^7.0.1",
+    "postcss-clean": "^1.1.0"
+  }
+}
