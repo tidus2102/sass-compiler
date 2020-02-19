@@ -1,18 +1,17 @@
-import {DEFAULT_BROWSERS} from './config';
 import postcss from 'postcss'
 import autoprefixer from 'autoprefixer'
-import clean from 'postcss-clean'
+import cssnano from 'cssnano'
 
 class PostCSS {
-    constructor() {
-        this.vars();
+    /*constructor() {
+        // this.vars();
         // this.init();
     }
 
     vars() {
-        this.browserList = DEFAULT_BROWSERS;
+        // this.browserList = DEFAULT_BROWSERS;
         // this.$input = document.querySelector("#js-input");
-    }
+    }*/
 
     // init() {
     //     this.$input.innerHTML = CSS_EXAMPLE;
@@ -25,18 +24,16 @@ class PostCSS {
     addPrefixerAndMinify(source, config, callback) {
         if (config == null)
             config = {
-                autoprefixer: {
-                    browsers: this.browserList,
-                    grid: true
+                autoprefixer: {     //https://github.com/postcss/autoprefixer#options
                 },
-                clean: {
-                    level: 2
+                cssnano: {
+                    preset: 'default'
                 }
             };
 
         postcss([
             autoprefixer(config.autoprefixer),
-            clean(config.clean),
+            cssnano(config.cssnano),
         ])
             .process(source)
             .then(compiled => {
